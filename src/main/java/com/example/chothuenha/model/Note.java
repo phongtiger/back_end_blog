@@ -22,6 +22,10 @@ public class Note {
     @JoinColumn(name = "category")
     private Category category;
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
     public Note() {
     }
     public Note(String name, String content, String url) {
