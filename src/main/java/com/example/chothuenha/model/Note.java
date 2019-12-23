@@ -19,7 +19,7 @@ public class Note {
     private String url;
 
     @ManyToOne
-    @JoinColumn(name = "category")
+    @JoinColumn(name = "category_id")
     private Category category;
 
     @ManyToOne
@@ -29,6 +29,14 @@ public class Note {
     public Note() {
     }
     public Note(String name, String content, String url) {
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Long getId() {
