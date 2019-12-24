@@ -1,27 +1,33 @@
 package com.example.chothuenha.message.request;
 
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 import java.util.Set;
 
 public class SignUpForm {
+    @NotEmpty
     @NotBlank
+    @NotNull
     @Size(min = 3, max = 50)
     private String name;
 
+    @NotEmpty
     @NotBlank
+    @NotNull
     @Size(min = 3, max = 50)
     private String username;
 
+    @NotEmpty
     @NotBlank
+    @NotNull
     @Size(max = 60)
     @Email
     private String email;
 
     private Set<String> role;
 
+    @NotEmpty
     @NotBlank
+    @NotNull
     @Size(max = 40, min = 6)
     private String password;
 

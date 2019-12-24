@@ -1,11 +1,30 @@
 package com.example.chothuenha.message.request;
 
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
+
 public class NoteForm {
     private Long id;
+    @NotBlank
+    @NotEmpty
+    @NotNull
     private String name;
+
+    @NotBlank
+    @NotEmpty
+    @NotNull
     private String content;
     private String url;
+
+    @NotBlank
+    @NotEmpty
+    @NotNull
     private Long category_id;
+
+    @NotBlank
+    @NotEmpty
+    @NotNull
     private Long user_id;
 
     public NoteForm() {
