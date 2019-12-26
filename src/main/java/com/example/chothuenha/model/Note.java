@@ -19,10 +19,6 @@ public class Note {
     private String url;
 
     @ManyToOne
-    @JoinColumn(name = "category_id")
-    private Category category;
-
-    @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
@@ -71,11 +67,4 @@ public class Note {
         this.url = url;
     }
 
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
 }
